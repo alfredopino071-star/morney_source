@@ -43,7 +43,7 @@ jobs:
       - name: Install Android SDK and NDK
         run: |
           yes | sdkmanager --licenses > /dev/null || true
-          sdkmanager "platforms;android-37" "build-tools;37.0.0" "ndk;30.0.16248370" "cmake;4.1.2"
+          sdkmanager --channel=3 "platforms;android-37" "build-tools;37.0.0" "ndk;30.0.16248370" "cmake;4.1.2"
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: '1.99.0'
